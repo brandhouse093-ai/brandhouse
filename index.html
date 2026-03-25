@@ -3,201 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRAND HOUSE | Jamui, Bihar</title>
+    
+    <title>BRAND HOUSE Jamui | Best Men's Wear & Footwear in Bihar</title>
+    <meta name="description" content="Visit BRAND HOUSE in Jamui, Bihar for premium Men's Wear and Footwear. Located at DSS Market, Bypass Road. Best collection of shoes and clothes.">
+    <meta name="keywords" content="Brand House Jamui, Men's wear Jamui, Shoe store Jamui, Bihar clothing store, DSS Market Jamui">
+    <meta name="author" content="Brand House">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
     <style>
         :root {
             --primary-blue: #007bff;
-            --dark-bg: #0a0a0a;
+            --dark-bg: #0a0a0ab6;
             --card-bg: #1a1a1a;
             --text-light: #ffffff;
             --accent-yellow: #ffcc00;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            scroll-behavior: smooth;
-            line-height: 1.6;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--dark-bg); color: var(--text-light); scroll-behavior: smooth; line-height: 1.6; }
 
         /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            padding: 15px 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            border-bottom: 1px solid #333;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--primary-blue);
-        }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.9); padding: 15px 0; z-index: 1000; display: flex; justify-content: center; border-bottom: 1px solid #333; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
 
         /* Hero Section */
-        .hero {
+        .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('1000010438.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
+        .hero h1 { font-size: clamp(2.5rem, 10vw, 5rem); color: var(--accent-yellow); margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+
+        /* Buttons */
+        .btn-group { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
+        .btn { padding: 15px 40px; border-radius: 50px; font-weight: 700; text-decoration: none; text-transform: uppercase; transition: 0.3s; cursor: pointer; border: none; display: inline-block; }
+        .btn-order { background: var(--primary-blue); color: white; }
+        .btn-pay { background: #28a745; color: white; }
+        .btn:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+
+        /* Gallery */
+        .container { max-width: 1200px; margin: 80px auto; padding: 0 20px; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: var(--primary-blue); text-transform: uppercase; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .gallery-card { background: var(--card-bg); border-radius: 15px; overflow: hidden; border: 1px solid #333; }
+        .gallery-card img { width: 100%; height: 250px; object-fit: cover; display: block; }
+        .gallery-info { padding: 15px; text-align: center; font-weight: bold; }
+
+        /* Chatbot Style Widget */
+        #chat-widget { position: fixed; bottom: 20px; right: 20px; z-index: 2000; }
+        .chat-button { background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; cursor: pointer; display: flex; align-items: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); font-weight: bold; text-decoration: none; border: none; }
+        .chat-bubble { position: absolute; bottom: 70px; right: 0; background: white; color: black; padding: 15px; border-radius: 15px; width: 200px; font-size: 0.85rem; box-shadow: 0 5px 15px rgba(0,0,0,0.2); display: none; }
+        .chat-bubble::after { content: ''; position: absolute; bottom: -10px; right: 20px; border-width: 10px 10px 0; border-style: solid; border-color: white transparent; }
+
+        /* Contact Section */
+        .contact-box { background: var(--card-bg); padding: 40px; border-radius: 20px; text-align: center; border-top: 4px solid var(--primary-blue); }
+        .hero { 
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('1000010438.jpeg');
-            background-size: cover;
-            background-position: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 20px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('1000010438.jpeg');
+            background-size: cover;
+            background-position: center;
         }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 10vw, 5rem);
-            color: var(--accent-yellow);
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            max-width: 600px;
-        }
-
-        /* Buttons */
-        .btn-group {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .btn {
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-weight: 700;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-order { background: var(--primary-blue); color: white; }
-        .btn-pay { background: #28a745; color: white; }
         
-        .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-        }
-
-        /* Gallery Section */
-        .container {
-            max-width: 1200px;
-            margin: 80px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: var(--primary-blue);
-            text-transform: uppercase;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .gallery-card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid #333;
-            transition: 0.3s;
-        }
-
-        .gallery-card:hover {
-            border-color: var(--primary-blue);
-        }
-
-        .gallery-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .gallery-info {
-            padding: 15px;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        /* Contact Section */
-        .contact-box {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            margin-bottom: 80px;
-            border-top: 4px solid var(--primary-blue);
-        }
-
-        .contact-box h2 { color: var(--accent-yellow); margin-bottom: 20px; }
-        .contact-box p { margin-bottom: 10px; font-size: 1.1rem; }
-
-        footer {
-            padding: 40px 20px;
-            text-align: center;
-            border-top: 1px solid #333;
-            font-size: 0.9rem;
-            color: #888;
-        }
-
-        /* Responsive Fixes */
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 3rem; }
-            .btn { width: 100%; }
-        }
     </style>
 </head>
 <body>
 
     <nav>
         <a href="#">Home</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Visit Store</a>
+        <a href="#gallery">Collection</a>
+        <a href="#contact">Location</a>
     </nav>
 
     <header class="hero">
         <h1 class="animate_animated animate_fadeInDown">BRAND HOUSE</h1>
-        <p class="animate_animated animate_fadeInUp">Premium Men's Wear & Footwear Collection in Jamui, Bihar.</p>
-        <div class="btn-group animate_animated animate_zoomIn">
-            <a href="https://wa.me/919973585721?text=Hello Brand House, I am interested in your collection!" class="btn btn-order">Order on WhatsApp</a>
+        <p class="animate_animated animate_fadeInUp">Premium Men's Wear & Footwear in Jamui, Bihar</p>
+        <div class="btn-group">
+            <a href="https://wa.me/919973585721" class="btn btn-order">Order on WhatsApp</a>
             <button onclick="alert('Payment Gateway will be enabled soon!')" class="btn btn-pay">Pay Online</button>
         </div>
     </header>
@@ -205,46 +90,30 @@
     <main class="container" id="gallery">
         <h2 class="section-title">Our Collection</h2>
         <div class="gallery-grid">
-            
-            <div class="gallery-card animate_animated animate_fadeInUp">
-                <img src="1000010456.jpeg" alt="Premium Footwear Wall">
-                <div class="gallery-info">Premium Shoe Display</div>
-            </div>
-
-            <div class="gallery-card animate_animated animate_fadeInUp" style="animation-delay: 0.1s;">
-                <img src="1000010435.jpeg" alt="Latest Sneakers">
-                <div class="gallery-info">Latest Arrivals</div>
-            </div>
-
-            <div class="gallery-card animate_animated animate_fadeInUp" style="animation-delay: 0.2s;">
-                <img src="1000010455.jpeg" alt="Mens Wear Section">
-                <div class="gallery-info">Men's Wear Interior</div>
-            </div>
-
-            <div class="gallery-card animate_animated animate_fadeInUp" style="animation-delay: 0.3s;">
-                <img src="1000010438.jpeg" alt="Brand House Jamui Storefront">
-                <div class="gallery-info">Main Store Entrance</div>
-            </div>
-
+            <div class="gallery-card"><img src="shoes.jpeg" alt="Premium Footwear Wall"><div class="gallery-info">Premium Shoes</div></div>
+            <div class="gallery-card"><img src="1000010435.jpeg"><div class="gallery-info">Latest Footwear</div></div>
+            <div class="gallery-card"><img src="1000010455.jpeg"><div class="gallery-info">Men's Apparel</div></div>
+            <div class="gallery-card"><img src="1000010438.jpeg"><div class="gallery-info">Main Store</div></div>
         </div>
     </main>
 
     <section class="container" id="contact">
         <div class="contact-box">
-            <h2>Visit Our Store</h2>
-            <p><strong>Location:</strong> DSS MARKET, BY PASS ROAD</p>
-            <p>NEAR BABY HUG SHOP, JAMUI, BIHAR - 811307</p>
-            <p style="margin-top: 20px;">
-                <a href="tel:9973585721" style="color: var(--primary-blue); font-size: 1.5rem; text-decoration: none; font-weight: bold;">
-                   📞 +91 9973585721
-                </a>
-            </p>
+            <h2>Visit Us in Jamui</h2>
+            <p>DSS MARKET, BY PASS ROAD, NEAR BABY HUG SHOP</p>
+            <p>JAMUI, BIHAR - 811307</p>
+            <p style="margin-top: 20px;"><a href="tel:9973585721" style="color: var(--primary-blue); font-size: 1.2rem; text-decoration: none;">📞 +91 9973585721</a></p>
         </div>
     </section>
 
-    <footer>
-        &copy; 2026 BRAND HOUSE JAMUI. All Rights Reserved.
-    </footer>
-
+    <div id="chat-widget" style="position: fixed; bottom: 20px; right: 20px; z-index: 99999;">
+        <div id="msg" style="background: white; color: black; padding: 12px; border-radius: 12px; margin-bottom: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); font-size: 0.9rem; width: 220px; border: 1px solid #ddd; font-weight: bold; display: block;">
+            <span style="color: #25d366;">●</span> AI Support: Hello! How can I help you today?
+        </div>
+        <a href="https://wa.me/919973585721?text=Hi Brand House, I saw your website and need help!" 
+           style="background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; cursor: pointer; display: flex; align-items: center; box-shadow: 0 5px 15px rgba(0,0,0,0.4); font-weight: bold; text-decoration: none;">
+            <span style="margin-right: 10px; font-size: 1.2rem;">💬</span> AI CHAT
+        </a>
+    </div>
 </body>
 </html>
